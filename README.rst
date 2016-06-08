@@ -6,6 +6,9 @@
 collective.clamav
 ==============================================================================
 
+.. image:: https://travis-ci.org/collective/collective.clamav.svg?branch=master
+    :target: https://travis-ci.org/collective/collective.clamav
+
 A product providing clamav antivirus integration for Plone sites with AT and Dexterity content types.
 It does that by defining a validator which could be used with any content
 type that uses File, Image or Named field(s). The open-source `Clam Antivirus` is
