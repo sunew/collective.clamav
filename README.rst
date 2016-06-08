@@ -93,8 +93,8 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/andreasma/collective.clamav/issues
-- Source Code: https://github.com/andreasma/collective.clamav
+- Issue Tracker: https://github.com/collective/collective.clamav/issues
+- Source Code: https://github.com/collective/collective.clamav
 - Documentation: in the docs folder
 
 
