@@ -21,7 +21,7 @@ class ClamavControlPanelAdapter(SchemaAdapterBase):
 
 
     def __init__(self, context):
-        super(clamavControlPanelAdapter, self).__init__(context)
+        super(ClamavControlPanelAdapter, self).__init__(context)
         properties = getToolByName(context, 'portal_properties')
         self.context = properties.clamav_properties
 
