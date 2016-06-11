@@ -5,7 +5,7 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from zope.interface import Interface
 from zope import schema
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from collective.clamav import _
+from collective.clamav import MessageFactory as _
 
 
 class ICollectiveClamavLayer(IDefaultBrowserLayer):
@@ -31,8 +31,8 @@ class IAVScannerSettings(Interface):
         title=_(u"Clamd local socket file"),
         description=_(u"If connected to clamd through local UNIX sockets, "
                       "the path to the local socket file."),
-        default = '/var/run/clamd',
-        required = True)
+        default='/var/run/clamd',
+        required=True)
 
     clamav_host = schema.ASCIILine(title=_(u"Scanner host"),
         description=_(u"If connected to clamd through the network, "

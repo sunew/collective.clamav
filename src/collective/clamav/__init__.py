@@ -6,7 +6,7 @@ from Products.validation import validation
 from collective.clamav.validator import clamavValidator
 
 
-_ = MessageFactory('collective.clamav')
+Messagefactory = MessageFactory('collective.clamav')
 
 
 validation.register(clamavValidator('isVirusFree'))
