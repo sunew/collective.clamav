@@ -10,15 +10,10 @@ from zope.interface import implements
 from collective.clamav import _
 from collective.clamav.interfaces import IAVScannerSettings
 
-
-
-
-
 class ClamavControlPanelAdapter(object):
 
     adapts(IPloneSiteRoot)
     implements(IAVScannerSettings)
-
 
     def __init__(self, context):
         super(ClamavControlPanelAdapter, self).__init__(context)
@@ -71,10 +66,8 @@ class ClamavControlPanelAdapter(object):
     clamav_timeout = property(get_clamav_timeout, set_clamav_timeout)
 
 
-
-
 class ClamavControlPanelForm(controlpanel.RegistryEditForm):
-    schema= IAVScannerSettings
+    schema = IAVScannerSettings
     label = _(u'Clamav Plone Settings')
     description = _(u"""""")
 
@@ -83,8 +76,6 @@ class ClamavControlPanelForm(controlpanel.RegistryEditForm):
 
     def updateWidgets(self):
             super(ClamavControlPanelForm, self).updateWidgets()
-
-
 
 class ClamavControlPanelView(controlpanel.ControlPanelFormWrapper):
     form = ClamavControlPanelForm
