@@ -18,7 +18,6 @@ clamdConnectionType = SimpleVocabulary(
 )
 
 
-
 class IAVScannerSettings(Interface):
     """ Schema for the clamav settings
     """
