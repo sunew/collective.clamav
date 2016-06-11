@@ -5,9 +5,6 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import IPloneSiteRoot
 from zope.component import adapts
 from zope.interface import implements
-
-
-from collective.clamav import _
 from collective.clamav.interfaces import IAVScannerSettings
 
 
