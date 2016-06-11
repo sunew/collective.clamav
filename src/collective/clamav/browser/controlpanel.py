@@ -1,7 +1,7 @@
 from plone.app.registry.browser import controlpanel
 from collective.clamav import _
 from Products.CMFCore.utils import getToolByName
-from Products.CMFDefault.formlib.schema import SchemaAdapterBase
+
 from Products.CMFPlone.interfaces import IPloneSiteRoot
 from zope.component import adapts
 from zope.interface import implements
@@ -14,7 +14,7 @@ from collective.clamav.interfaces import IAVScannerSettings
 
 
 
-class ClamavControlPanelAdapter(SchemaAdapterBase):
+class ClamavControlPanelAdapter(object):
 
     adapts(IPloneSiteRoot)
     implements(IAVScannerSettings)
