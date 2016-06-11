@@ -10,6 +10,7 @@ from zope.interface import implements
 from collective.clamav import _
 from collective.clamav.interfaces import IAVScannerSettings
 
+
 class ClamavControlPanelAdapter(object):
 
     adapts(IPloneSiteRoot)
@@ -76,6 +77,7 @@ class ClamavControlPanelForm(controlpanel.RegistryEditForm):
 
     def updateWidgets(self):
             super(ClamavControlPanelForm, self).updateWidgets()
+
 
 class ClamavControlPanelView(controlpanel.ControlPanelFormWrapper):
     form = ClamavControlPanelForm

@@ -20,6 +20,7 @@ from zope.interface import implements
 from collective.clamav.interfaces import IAVScanner
 from collective.clamav.scanner import ScanError
 
+
 class CollectiveClamavLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)

@@ -38,7 +38,7 @@ def _scanBuffer(buffer):
     return result
 
 
-class clamavValidator:
+class ClamavValidator:
     """Archetypes validator to confirm a file upload is virus-free."""
 
     implements(IValidator)
@@ -105,11 +105,11 @@ else:
                 result = _scanBuffer(value.data)
             except ScanError as e:
                 logger.error('ScanError %s on %s.' % (e, value.filename))
-                raise Invalid("There was an error while checking the file for " \
+                raise Invalid("There was an error while checking the file for "
                               "viruses: Please contact your system administrator.")
 
             if result:
-                raise Invalid("Validation failed, file is virus-infected. (%s)" % \
+                raise Invalid("Validation failed, file is virus-infected. (%s)" %
                               (result))
             else:
                 # mark the file instance as already checked
