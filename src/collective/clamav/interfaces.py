@@ -21,11 +21,12 @@ clamdConnectionType = SimpleVocabulary(
 class IAVScannerSettings(Interface):
     """ Schema for the clamav settings
     """
-    clamav_connection = schema.Choice(
-        vocabulary=clamdConnectionType,
+    clamav_connection = schema.TextLine(
+
         title=_(u"Connection type to clamd"),
         description=_(u"Choose whether clamd is accessible through local "
-                      u"UNIX sockets or network.")
+                      u"UNIX sockets or network."),
+        default='No value'
     )
 
     clamav_socket = schema.ASCIILine(
