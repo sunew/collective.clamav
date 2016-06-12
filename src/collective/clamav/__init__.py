@@ -9,4 +9,4 @@ from collective.clamav.validator import ClamavValidator
 Messagefactory = MessageFactory('collective.clamav')
 
 
-validation.register(clamavValidator('isVirusFree'))
+validation.register(ClamavValidator('isVirusFree'))
