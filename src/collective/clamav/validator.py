@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import logging
 
 import Globals
@@ -107,7 +108,7 @@ else:
                 logger.error('ScanError %s on %s.' % (e, value.filename))
                 raise Invalid("There was an error while checking "
                               "the file for viruses: Please "
-                               "contact your system administrator.")
+                              "contact your system administrator.")
 
             if result:
                 raise Invalid("Validation failed, file "

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from plone.app.registry.browser import controlpanel
 from collective.clamav import MessageFactory as _
 from Products.CMFCore.utils import getToolByName

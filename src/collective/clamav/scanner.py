@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import clamd
 
 from zope.interface import implements

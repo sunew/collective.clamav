@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from archetypes.schemaextender.interfaces import ISchemaModifier
 from Products.ATContentTypes.interfaces import IATFile
 from Products.ATContentTypes.interfaces import IATImage
