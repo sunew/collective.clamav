@@ -13,7 +13,7 @@ class ICollectiveClamavLayer(IDefaultBrowserLayer):
 
 
 clamdConnectionType = SimpleVocabulary(
-    [SimpleTerm(value=u"Unixsocket", title="socket"),
+    [SimpleTerm(value=u"Unix Socket", title="socket"),
      SimpleTerm(value=u"Network", title="net")]
 )
 
