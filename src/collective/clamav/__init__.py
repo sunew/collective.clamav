@@ -3,7 +3,7 @@
 
 from zope.i18nmessageid import MessageFactory
 from Products.validation import validation
-from collective.clamav.validator import clamavValidator
+from collective.clamav.validator import ClamavValidator
 
 
 Messagefactory = MessageFactory('collective.clamav')
