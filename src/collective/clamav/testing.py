@@ -17,7 +17,6 @@ from zope.configuration import xmlconfig
 from zope.interface import implements
 
 from collective.clamav.interfaces import IAVScanner
-from collective.clamav.scanner import ScanError
 
 
 class CollectiveClamavLayer(PloneSandboxLayer):

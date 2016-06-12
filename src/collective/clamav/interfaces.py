@@ -23,6 +23,14 @@ class IAVScannerSettings(Interface):
     """
 
 
+clamav_connection = schema.Choice(
+    title=_(u"Connection type to clamd"),
+    description=_(u"Choose whether clamd is "
+                  u"accessible through local "
+                  u"UNIX sockets or network."),
+    vocabulary=clamdConnectionType)
+
+
 class IAVScanner(Interface):
     def ping():
         pass
