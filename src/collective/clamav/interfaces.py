@@ -8,14 +8,13 @@ from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from collective.clamav import MessageFactory as _
 
 
-class ICollectiveClamavLayer(IDefaultBrowserLayer):
-    """Marker interface that defines a browser layer."""
-
-
 clamdConnectionType = SimpleVocabulary(
     [SimpleTerm(value=u"Local UNIX Socket", title=_(u"socket")),
      SimpleTerm(value=u"Network", title=_(u"net"))]
-)
+     )
+
+class ICollectiveClamavLayer(IDefaultBrowserLayer):
+    """Marker interface that defines a browser layer."""
 
 
 class IAVScannerSettings(Interface):
