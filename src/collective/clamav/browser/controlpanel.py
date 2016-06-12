@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from plone.app.registry.browser import controlpanel
-from collective.clamav import Clamavmessagefactory as _
+from collective.clamav import _
 from Products.CMFCore.utils import getToolByName
 
 from Products.CMFPlone.interfaces import IPloneSiteRoot

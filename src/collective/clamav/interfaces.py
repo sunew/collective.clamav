@@ -5,7 +5,7 @@ from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from zope.interface import Interface
 from zope import schema
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from collective.clamav import Clamavmessagefactory as _
+from collective.clamav import _
 
 
 class ICollectiveClamavLayer(IDefaultBrowserLayer):
