@@ -33,7 +33,7 @@
       factory=".setuphandlers.HiddenProfiles"
       name="collective.clamav-hiddenprofiles" />
 
-  <utility factory=".scanner.clamavScanner" />
+  <utility factory=".scanner.ClamavScanner" />
 
 
   <adapter

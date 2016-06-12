@@ -28,7 +28,7 @@ def _make_clamd(type, **kwargs):
         raise ScanError('Invalid call')
 
 
-class clamavScanner(object):
+class ClamavScanner(object):
     """
     """
     implements(IAVScanner)
