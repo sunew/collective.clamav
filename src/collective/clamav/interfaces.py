@@ -22,10 +22,11 @@ class IAVScannerSettings(Interface):
     """ Schema for the clamav settings
     """
     clamav_connection = schema.Choice(
+        vocabulary=clamdConnectionType,
         title=_(u"Connection type to clamd"),
         description=_(u"Choose whether clamd is accessible through local "
-                      u"UNIX sockets or network."),
-        vocabulary=clamdConnectionType)
+                      u"UNIX sockets or network.")
+    )
 
     clamav_socket = schema.ASCIILine(
         title=_(u"Clamd local socket file"),
