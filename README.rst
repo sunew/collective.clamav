@@ -2,9 +2,9 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
-==============================================================================
+=================
 collective.clamav
-==============================================================================
+=================
 
 .. image:: https://travis-ci.org/collective/collective.clamav.svg?branch=master
     :target: https://travis-ci.org/collective/collective.clamav
@@ -17,7 +17,7 @@ supported which is available for all platforms.
 
 
 Usage
---------
+-----
 
 - To start, you need to have ``clamd`` running on some host accessible by your
 instances. ``collective.clamav`` supports either UNIX socket connections or

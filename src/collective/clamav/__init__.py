@@ -7,6 +7,6 @@ from Products.validation import validation
 _ = MessageFactory('collective.clamav')
 
 
-from collective.clamav.validator import ClamavValidator
+from collective.clamav.validator import ClamavValidator  # noqa
 
 validation.register(ClamavValidator('isVirusFree'))
