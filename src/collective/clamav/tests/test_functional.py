@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from os.path import dirname, join
 from StringIO import StringIO
 
@@ -45,7 +46,8 @@ class TestIntegration(unittest.TestCase):
 
     def test_atvirusfile(self):
         # Test if a virus-infected file gets caught by the validator
-        self.browser.open(self.portal.absolute_url() + '/virus-folder/++add++File')
+        self.browser.open(
+            self.portal.absolute_url() + '/virus-folder/++add++File')
         control = self.browser.getControl(name='form.widgets.file')
         control.filename = 'virus.txt'
         control.value = StringIO(EICAR)
@@ -53,7 +55,8 @@ class TestIntegration(unittest.TestCase):
         self.failIf('Eicar-Test-Signature' not in self.browser.contents)
 
         # And let's see if a clean file passes...
-        self.browser.open(self.portal.absolute_url() + '/virus-folder/++add++File')
+        self.browser.open(
+            self.portal.absolute_url() + '/virus-folder/++add++File')
         control = self.browser.getControl(name='form.widgets.file')
         control.filename = 'nonvirus.txt'
         control.value = StringIO('Not a virus')
@@ -63,7 +66,8 @@ class TestIntegration(unittest.TestCase):
     def test_atvirusimage(self):
         # Test if a virus-infected image gets caught by the validator
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        self.browser.open(self.portal.absolute_url() + '/virus-folder/++add++Image')
+        self.browser.open(
+            self.portal.absolute_url() + '/virus-folder/++add++Image')
         control = self.browser.getControl(name='form.widgets.image')
         image_data = getFileData('image.png')
         control.filename = 'virus.png'
@@ -74,7 +78,8 @@ class TestIntegration(unittest.TestCase):
         self.assertTrue('Eicar-Test-Signature' in self.browser.contents)
 
         # And let's see if a clean file passes...
-        self.browser.open(self.portal.absolute_url() + '/virus-folder/++add++Image')
+        self.browser.open(
+            self.portal.absolute_url() + '/virus-folder/++add++Image')
         control = self.browser.getControl(name='form.widgets.image')
         control.filename = 'nonvirus.png'
         control.value = StringIO(image_data)

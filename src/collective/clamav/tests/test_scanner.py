@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zope.component import getUtility
 
 from collective.clamav.interfaces import IAVScanner
@@ -83,9 +84,10 @@ class TestScanner(unittest.TestCase):
 
         # And a normal file...
         self.assertEquals(
-            self.scanner.scanBuffer('Not a virus', type='socket',
-            socketpath='/tmp/clamd.socket'),
-            None)
+            self.scanner.scanBuffer(
+                'Not a virus', type='socket',
+                socketpath='/tmp/clamd.socket'
+            ), None)
 
         # Test timeout
         self.assertRaises(

@@ -9,7 +9,6 @@ from plone.testing import z2
 
 import collective.clamav
 
-from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
 from zope.component import getGlobalSiteManager
