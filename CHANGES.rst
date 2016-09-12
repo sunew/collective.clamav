@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0a2 (unreleased)
+2.0a2 (2016-09-12)
 ------------------
 
 - Fix ReST/pypi page syntax.
