@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0a1 (unreleased)
+2.0a1 (2016-09-12)
 ------------------
 
 - Initial release based on collective.ATClamAV with a new controlpanel module
