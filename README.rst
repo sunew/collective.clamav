@@ -19,23 +19,16 @@ supported which is available for all platforms.
 Usage
 -----
 
-- To start, you need to have ``clamd`` running on some host accessible by your
-instances. ``collective.clamav`` supports either UNIX socket connections or
-remote connections.
+- To start, you need to have ``clamd`` running on some host accessible by your instances. ``collective.clamav`` supports either UNIX socket connections or remote connections.
 
-- Install collective.clamav and setup the host & port or the path to the
-``clamd`` socket in the control panel (default is a network connection to
-``clamd`` listening on *localhost* at port 3310). By default *Files* and
-*Images* are going to be checked for viruses when added or updated.
+- Install collective.clamav and setup the host & port or the path to the ``clamd`` socket in the control panel (default is a network connection to ``clamd`` listening on *localhost* at port 3310). By default *Files* and *Images* are going to be checked for viruses when added or updated.
 
 
 Adding anti-virus protection to non-ATFile based content
 --------------------------------------------------------
 
 If you want to add anti-virus protection to your custom AT content types
-add the *isVirusFree* validator to your FileField(s). For instance:
-
-::
+add the *isVirusFree* validator to your FileField(s). For instance::
 
       FileField('file',
         validators = (('isNonEmptyFile', V_REQUIRED),
@@ -43,39 +36,10 @@ add the *isVirusFree* validator to your FileField(s). For instance:
         widget = FileWidget(label=u'File'),
       )
 
-::
-
 If you create custom Dexterity content types add only the necessary import statement to the
-module and all plone.namedfile fields were automatically scaned:
+module and all plone.namedfile fields were automatically scaned::
 
-::
-
-from Products.validation import V_REQUIRED)
-
-::
-
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
--
-
-
-Documentation
--------------
-
-Full documentation for end users can be found in the "docs" folder
-
-
-Translations
-------------
-
-This product has been translated into
-
-- non yet
-
+    from Products.validation import V_REQUIRED)
 
 Installation
 ------------

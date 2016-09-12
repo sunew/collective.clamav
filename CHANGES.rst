@@ -4,7 +4,8 @@ Changelog
 2.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix ReST/pypi page syntax.
+  [timo]
 
 
 2.0a1 (2016-09-12)
