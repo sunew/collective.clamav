@@ -37,6 +37,7 @@ class ClamavScanner(object):
     def ping(self, type, **kwargs):
         if not _make_clamd(type, **kwargs).ping() == "PONG":
             raise ScanError('Could not ping clamd server')
+        return True
 
     def scanBuffer(self, buffer, type, **kwargs):
         """Scans a buffer for viruses

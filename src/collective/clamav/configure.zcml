@@ -44,5 +44,6 @@
      name="collective.clamav.image"
      factory=".schema.VirusFreeImageModifier" />
 
+  <adapter factory=".validator.Z3CFormclamavValidator" />
 
 </configure>

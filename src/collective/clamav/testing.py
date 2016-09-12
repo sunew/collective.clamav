@@ -9,7 +9,6 @@ from plone.testing import z2
 
 import collective.clamav
 
-from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import setRoles
 from zope.component import getGlobalSiteManager
@@ -83,7 +82,7 @@ class MockAVScanner(object):
 
 class AVFixture(PloneSandboxLayer):
 
-    defaultBases = (PLONE_FIXTURE, )
+    defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE, )
 
     def setUpZope(self, app, configurationContext):
         import collective.clamav
