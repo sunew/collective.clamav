@@ -20,8 +20,6 @@
 
   <!-- Control panel-->
 
-    <adapter factory=".controlpanel.ClamavControlPanelAdapter" />
-
     <browser:page
         name="clamav_settings_controlpanel"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
