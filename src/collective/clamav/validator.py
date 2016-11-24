@@ -2,13 +2,13 @@
 import logging
 
 import Globals
-from Products.CMFCore.interfaces import ISiteRoot
-from Products.CMFCore.utils import getToolByName
 from Products.validation.interfaces.IValidator import IValidator
+from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 from zope.interface import implements, Invalid
 from collective.clamav.interfaces import IAVScanner
 from collective.clamav.scanner import ScanError
+from collective.clamav.interfaces import IAVScannerSettings
 
 logger = logging.getLogger('collective.clamav')
 
@@ -18,9 +18,8 @@ def _scanBuffer(buffer):
         logger.warn('Skipping virus scan in development mode.')
         return ''
 
-    siteroot = getUtility(ISiteRoot)
-    ptool = getToolByName(siteroot, 'portal_properties')
-    settings = getattr(ptool, 'clamav_properties', None)
+    registry = getUtility(IRegistry)
+    settings = registry.forInterface(IAVScannerSettings)
     if settings is None:
         return ''
     scanner = getUtility(IAVScanner)
