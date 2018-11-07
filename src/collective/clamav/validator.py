@@ -22,6 +22,9 @@ def _scanBuffer(buffer):
     settings = registry.forInterface(IAVScannerSettings)
     if settings is None:
         return ''
+    if not (settings.clamav_enabled):
+        return ''
+
     scanner = getUtility(IAVScanner)
 
     if settings.clamav_connection == 'net':
