@@ -61,6 +61,7 @@ class ClamavValidator:
             content = value.read()
             result = ''
             try:
+                logger.info('Scanning file for virus')
                 result = _scanBuffer(content)
             except ScanError as e:
                 logger.error('ScanError %s on %s.' % (e, value.filename))
